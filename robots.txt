@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://copystrategy.netlify.app/sitemap.xml
+Sitemap: https://copy.mytimebox.app/sitemap.xml
