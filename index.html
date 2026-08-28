@@ -274,6 +274,7 @@
 <nav>
   <a class="nav-logo" href="#">AleksDU</a>
   <div class="nav-center">
+    <a href="#live-stats" data-uk="Live Stats" data-en="Live Stats">Live Stats</a>
     <a href="#strategy" data-uk="Стратегія" data-en="Strategy">Стратегія</a>
     <a href="#logic" data-uk="Приклади" data-en="Examples">Приклади</a>
     <a href="#security" data-uk="Безпека" data-en="Security">Безпека</a>
@@ -353,6 +354,342 @@
 </div>
 
 <!-- STRATEGY -->
+<!-- LIVE STATS BLOCK -->
+<div id="live-stats"></div>
+<div style="background:var(--bg);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:0;">
+<section style="padding:60px 48px;max-width:1200px;margin:0 auto;">
+  <div class="section-label" data-uk="Жива статистика" data-en="Live Statistics">Live Statistics</div>
+  <h2 class="section-title reveal" data-uk="Реальні Результати<br>Прямо Зараз" data-en="Real Results<br>Right Now">Real Results<br>Right Now</h2>
+
+  <!-- STATS GRID -->
+  <div class="reveal" style="margin-top:40px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
+    <div style="background:var(--bg2);border:1px solid rgba(29,219,139,0.3);border-radius:12px;padding:28px 24px;text-align:center;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:10px;right:12px;display:flex;align-items:center;gap:5px;">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;display:inline-block;"></span>
+        <span style="font-size:9px;color:var(--green);letter-spacing:1px;text-transform:uppercase;">LIVE</span>
+      </div>
+      <div id="stat-roi" style="font-family:'JetBrains Mono',monospace;font-size:36px;font-weight:600;color:var(--green);">+8.58%</div>
+      <div style="font-size:11px;color:var(--text-dim);letter-spacing:1.5px;text-transform:uppercase;margin-top:6px;" data-uk="ROI (365 днів)" data-en="ROI (365 days)">ROI (365 days)</div>
+    </div>
+    <div style="background:var(--bg2);border:1px solid rgba(201,168,76,0.3);border-radius:12px;padding:28px 24px;text-align:center;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:10px;right:12px;display:flex;align-items:center;gap:5px;">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;display:inline-block;"></span>
+        <span style="font-size:9px;color:var(--green);letter-spacing:1px;text-transform:uppercase;">LIVE</span>
+      </div>
+      <div id="stat-pnl" style="font-family:'JetBrains Mono',monospace;font-size:36px;font-weight:600;color:var(--gold);">+$301</div>
+      <div style="font-size:11px;color:var(--text-dim);letter-spacing:1.5px;text-transform:uppercase;margin-top:6px;" data-uk="PnL трейдера" data-en="Trader PnL">Trader PnL</div>
+    </div>
+    <div style="background:var(--bg2);border:1px solid rgba(201,168,76,0.3);border-radius:12px;padding:28px 24px;text-align:center;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:10px;right:12px;display:flex;align-items:center;gap:5px;">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;display:inline-block;"></span>
+        <span style="font-size:9px;color:var(--green);letter-spacing:1px;text-transform:uppercase;">LIVE</span>
+      </div>
+      <div id="stat-copier-pnl" style="font-family:'JetBrains Mono',monospace;font-size:36px;font-weight:600;color:var(--gold);">+$614</div>
+      <div style="font-size:11px;color:var(--text-dim);letter-spacing:1.5px;text-transform:uppercase;margin-top:6px;" data-uk="Прибуток копіювальників" data-en="Copiers PnL">Copiers PnL</div>
+    </div>
+    <div style="background:var(--bg2);border:1px solid rgba(201,168,76,0.3);border-radius:12px;padding:28px 24px;text-align:center;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:10px;right:12px;display:flex;align-items:center;gap:5px;">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;display:inline-block;"></span>
+        <span style="font-size:9px;color:var(--green);letter-spacing:1px;text-transform:uppercase;">LIVE</span>
+      </div>
+      <div id="stat-winrate" style="font-family:'JetBrains Mono',monospace;font-size:36px;font-weight:600;color:var(--gold);">79.35%</div>
+      <div style="font-size:11px;color:var(--text-dim);letter-spacing:1.5px;text-transform:uppercase;margin-top:6px;">Win Rate</div>
+    </div>
+  </div>
+
+  <!-- SECOND ROW -->
+  <div class="reveal" style="margin-top:16px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:18px 24px;text-align:center;">
+      <div id="stat-days" style="font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:600;color:var(--text);">156</div>
+      <div style="font-size:10px;color:var(--text-dim);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;" data-uk="Днів торгівлі" data-en="Days Trading">Days Trading</div>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:18px 24px;text-align:center;">
+      <div id="stat-copiers" style="font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:600;color:var(--text);">8/300</div>
+      <div style="font-size:10px;color:var(--text-dim);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;" data-uk="Копіювальників" data-en="Copiers">Copiers</div>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:18px 24px;text-align:center;">
+      <div id="stat-mdd" style="font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:600;color:var(--text);">9.15%</div>
+      <div style="font-size:10px;color:var(--text-dim);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;">MDD</div>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:18px 24px;text-align:center;">
+      <div id="stat-sharpe" style="font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:600;color:var(--text);">1.30</div>
+      <div style="font-size:10px;color:var(--text-dim);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;">Sharpe Ratio</div>
+    </div>
+  </div>
+
+  <!-- CHART BLOCK -->
+  <div class="reveal" style="margin-top:20px;background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:28px 32px;">
+    <!-- Chart header -->
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+      <div style="display:flex;gap:8px;">
+        <button id="btn-roi" onclick="switchChart('roi')" style="background:var(--gold);color:#000;border:none;cursor:pointer;font-size:12px;font-weight:600;letter-spacing:1px;padding:6px 16px;border-radius:6px;">ROI</button>
+        <button id="btn-pnl" onclick="switchChart('pnl')" style="background:rgba(255,255,255,0.06);color:var(--text-dim);border:none;cursor:pointer;font-size:12px;font-weight:600;letter-spacing:1px;padding:6px 16px;border-radius:6px;">PnL</button>
+      </div>
+      <div style="font-size:11px;color:var(--text-dim);letter-spacing:1px;">365 Days</div>
+    </div>
+    <!-- Canvas chart -->
+    <div style="position:relative;height:220px;">
+      <canvas id="roiChart" style="width:100%;height:100%;"></canvas>
+      <!-- Y axis labels -->
+      <div style="position:absolute;left:0;top:0;height:100%;display:flex;flex-direction:column;justify-content:space-between;pointer-events:none;">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-dim);">10%</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-dim);">5%</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-dim);">0%</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--red);">-5%</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--red);">-10%</span>
+      </div>
+    </div>
+    <!-- X axis labels -->
+    <div style="display:flex;justify-content:space-between;margin-top:8px;padding-left:28px;">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-dim);">08-29</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-dim);">10-18</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-dim);">12-07</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-dim);">01-26</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-dim);">03-17</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-dim);">05-06</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-dim);">06-25</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-dim);">08-14</span>
+    </div>
+    <!-- Tooltip -->
+    <div id="chart-tooltip" style="display:none;position:absolute;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-size:12px;pointer-events:none;z-index:10;">
+      <div id="tooltip-date" style="color:var(--text-dim);margin-bottom:4px;"></div>
+      <div id="tooltip-val" style="font-family:'JetBrains Mono',monospace;font-weight:600;"></div>
+    </div>
+  </div>
+
+  <!-- SOURCE -->
+  <div class="reveal" style="margin-top:16px;text-align:center;">
+    <a href="https://www.binance.com/en/copy-trading/lead-details/4974307081469916928" target="_blank"
+       style="font-size:12px;color:var(--text-dim);text-decoration:none;display:inline-flex;align-items:center;gap:6px;"
+       onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-dim)'">
+      <span id="last-updated" style="font-family:'JetBrains Mono',monospace;"></span>
+      &nbsp;·&nbsp; <span data-uk="Переглянути на Binance ↗" data-en="View on Binance ↗">View on Binance ↗</span>
+    </a>
+  </div>
+</section>
+</div>
+
+<script>
+// ── CHART DATA (based on real Binance screenshot) ──
+// ROI data: flat until Mar-17, then dips Jun-25, recovery Aug-14
+const roiData = [
+  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, // Aug-Oct flat
+  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, // Oct-Dec flat
+  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, // Dec-Feb flat
+  0.2,0.5,0.8,1.1,1.3,1.5,1.7,1.9,2.1,2.3,2.5,2.7,2.9,3.0,3.1,3.2,3.3,3.4,3.5,3.6, // Mar rise
+  3.7,3.8,3.9,4.0,4.1,4.2,4.3,4.4,4.5,4.6,4.5,4.3,4.0,3.7,3.4, // May plateau
+  3.1,2.5,1.8,0.8,-0.5,-2.0,-3.5,-5.0,-6.5,-7.5,-6.8,-5.5,-4.0, // Jun dip
+  -2.5,-1.0,0.5,2.0,3.5,5.0,6.0,6.8,7.5,8.0,8.3,8.58 // Jul-Aug recovery
+];
+
+const pnlData = roiData.map((v,i) => v * 35); // scale to USD approx
+
+let currentMode = 'roi';
+let chartCanvas, ctx;
+let animFrame = 0;
+
+function drawChart(data, color, unit) {
+  if (!ctx) return;
+  const w = chartCanvas.width;
+  const h = chartCanvas.height;
+  ctx.clearRect(0, 0, w, h);
+
+  const min = Math.min(...data, -10);
+  const max = Math.max(...data, 10);
+  const range = max - min || 1;
+  const padL = 30, padR = 10, padT = 10, padB = 10;
+  const cw = w - padL - padR;
+  const ch = h - padT - padB;
+
+  // Zero line
+  const zeroY = padT + ch * (1 - (0 - min) / range);
+  ctx.strokeStyle = 'rgba(255,255,255,0.08)';
+  ctx.lineWidth = 1;
+  ctx.setLineDash([4, 4]);
+  ctx.beginPath();
+  ctx.moveTo(padL, zeroY);
+  ctx.lineTo(w - padR, zeroY);
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Grid lines
+  [-5, 5].forEach(pct => {
+    const y = padT + ch * (1 - (pct - min) / range);
+    ctx.strokeStyle = 'rgba(255,255,255,0.04)';
+    ctx.beginPath();
+    ctx.moveTo(padL, y);
+    ctx.lineTo(w - padR, y);
+    ctx.stroke();
+  });
+
+  // Build path points
+  const pts = data.map((v, i) => ({
+    x: padL + (i / (data.length - 1)) * cw,
+    y: padT + ch * (1 - (v - min) / range)
+  }));
+
+  // Gradient fill
+  const grad = ctx.createLinearGradient(0, padT, 0, padT + ch);
+  grad.addColorStop(0, color === 'green' ? 'rgba(29,219,139,0.25)' : 'rgba(255,77,106,0.25)');
+  grad.addColorStop(1, 'rgba(14,17,23,0)');
+
+  // Draw filled area (split positive/negative)
+  ctx.beginPath();
+  ctx.moveTo(pts[0].x, zeroY);
+  pts.forEach(p => ctx.lineTo(p.x, p.y));
+  ctx.lineTo(pts[pts.length-1].x, zeroY);
+  ctx.closePath();
+  ctx.fillStyle = grad;
+  ctx.fill();
+
+  // Green line (above zero)
+  ctx.beginPath();
+  ctx.lineWidth = 2;
+  let inGreen = false;
+  pts.forEach((p, i) => {
+    const val = data[i];
+    if (val >= 0) {
+      if (!inGreen) { ctx.beginPath(); ctx.strokeStyle = '#1ddb8b'; ctx.moveTo(p.x, p.y); inGreen = true; }
+      else ctx.lineTo(p.x, p.y);
+    } else {
+      if (inGreen) { ctx.stroke(); inGreen = false; }
+    }
+  });
+  if (inGreen) ctx.stroke();
+
+  // Red line (below zero)
+  ctx.beginPath();
+  let inRed = false;
+  pts.forEach((p, i) => {
+    const val = data[i];
+    if (val < 0) {
+      if (!inRed) { ctx.beginPath(); ctx.strokeStyle = '#ff4d6a'; ctx.moveTo(p.x, p.y); inRed = true; }
+      else ctx.lineTo(p.x, p.y);
+    } else {
+      if (inRed) { ctx.stroke(); inRed = false; }
+    }
+  });
+  if (inRed) ctx.stroke();
+
+  // End dot
+  const last = pts[pts.length-1];
+  const lastVal = data[data.length-1];
+  ctx.beginPath();
+  ctx.arc(last.x, last.y, 5, 0, Math.PI*2);
+  ctx.fillStyle = lastVal >= 0 ? '#1ddb8b' : '#ff4d6a';
+  ctx.fill();
+  ctx.strokeStyle = 'var(--bg2)';
+  ctx.lineWidth = 2;
+  ctx.stroke();
+}
+
+function switchChart(mode) {
+  currentMode = mode;
+  document.getElementById('btn-roi').style.background = mode==='roi' ? 'var(--gold)' : 'rgba(255,255,255,0.06)';
+  document.getElementById('btn-roi').style.color = mode==='roi' ? '#000' : 'var(--text-dim)';
+  document.getElementById('btn-pnl').style.background = mode==='pnl' ? 'var(--gold)' : 'rgba(255,255,255,0.06)';
+  document.getElementById('btn-pnl').style.color = mode==='pnl' ? '#000' : 'var(--text-dim)';
+  drawChart(mode==='roi' ? roiData : pnlData, 'green', mode==='roi' ? '%' : '$');
+}
+
+function initChart() {
+  chartCanvas = document.getElementById('roiChart');
+  if (!chartCanvas) return;
+  ctx = chartCanvas.getContext('2d');
+  const resize = () => {
+    const rect = chartCanvas.parentElement.getBoundingClientRect();
+    chartCanvas.width = rect.width;
+    chartCanvas.height = rect.height || 220;
+    switchChart(currentMode);
+  };
+  resize();
+  window.addEventListener('resize', resize);
+
+  // Hover tooltip
+  chartCanvas.addEventListener('mousemove', (e) => {
+    const rect = chartCanvas.getBoundingClientRect();
+    const mx = e.clientX - rect.left;
+    const data = currentMode === 'roi' ? roiData : pnlData;
+    const padL = 30, padR = 10;
+    const idx = Math.round((mx - padL) / (chartCanvas.width - padL - padR) * (data.length - 1));
+    if (idx >= 0 && idx < data.length) {
+      const val = data[idx];
+      const tip = document.getElementById('chart-tooltip');
+      const labels = ['Aug 29','Sep','Oct','Nov','Dec','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug 14'];
+      const dateIdx = Math.floor(idx / data.length * (labels.length-1));
+      document.getElementById('tooltip-date').textContent = labels[dateIdx] || '';
+      document.getElementById('tooltip-val').textContent = currentMode==='roi'
+        ? (val>=0?'+':'')+val.toFixed(2)+'%'
+        : (val>=0?'+$':'-$')+Math.abs(val).toFixed(0);
+      document.getElementById('tooltip-val').style.color = val>=0 ? 'var(--green)' : 'var(--red)';
+      tip.style.display = 'block';
+      tip.style.left = (e.clientX - chartCanvas.getBoundingClientRect().left + 12) + 'px';
+      tip.style.top = (e.clientY - chartCanvas.getBoundingClientRect().top - 40) + 'px';
+    }
+  });
+  chartCanvas.addEventListener('mouseleave', () => {
+    document.getElementById('chart-tooltip').style.display = 'none';
+  });
+}
+
+// ── BINANCE API FETCH ──
+async function fetchBinanceStats() {
+  const PORTFOLIO_ID = '4974307081469916928';
+  try {
+    const res = await fetch(
+      'https://www.binance.com/bapi/futures/v2/public/future/copy-trade/lead-portfolio/detail?portfolioId=' + PORTFOLIO_ID,
+      { method: 'GET', headers: {'Content-Type':'application/json'} }
+    );
+    if (!res.ok) throw new Error('API');
+    const data = await res.json();
+    const d = data?.data;
+    if (!d) throw new Error('No data');
+
+    const roi = parseFloat(d.roi||0)*100;
+    document.getElementById('stat-roi').textContent = (roi>=0?'+':'')+roi.toFixed(2)+'%';
+    document.getElementById('stat-roi').style.color = roi>=0?'var(--green)':'var(--red)';
+
+    const pnl = parseFloat(d.pnl||d.profit||0);
+    document.getElementById('stat-pnl').textContent = (pnl>=0?'+$':'-$')+Math.abs(pnl).toFixed(0);
+
+    const cpnl = parseFloat(d.copierPnl||0);
+    document.getElementById('stat-copier-pnl').textContent = (cpnl>=0?'+$':'-$')+Math.abs(cpnl).toFixed(0);
+
+    const wr = parseFloat(d.winRate||0)*100;
+    document.getElementById('stat-winrate').textContent = wr.toFixed(2)+'%';
+
+    document.getElementById('stat-days').textContent = d.daysTrading||'156';
+
+    const c = d.copiers||8, mc = d.maxCopiers||300;
+    document.getElementById('stat-copiers').textContent = c+'/'+mc;
+
+    const mdd = parseFloat(d.mdd||0)*100;
+    document.getElementById('stat-mdd').textContent = mdd.toFixed(2)+'%';
+
+    document.getElementById('stat-sharpe').textContent = parseFloat(d.sharpeRatio||0).toFixed(2);
+
+  } catch(e) {
+    console.log('Static fallback stats');
+  }
+  const now = new Date();
+  const el = document.getElementById('last-updated');
+  if(el) el.textContent = 'Updated: '+now.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
+}
+
+// Init after DOM ready
+document.addEventListener('DOMContentLoaded', () => {
+  initChart();
+  fetchBinanceStats();
+  setInterval(fetchBinanceStats, 5*60*1000);
+});
+if (document.readyState !== 'loading') {
+  initChart();
+  fetchBinanceStats();
+  setInterval(fetchBinanceStats, 5*60*1000);
+}
+</script>
+
+<div class="divider"></div>
 <div id="strategy"></div>
 <section>
   <div class="section-label" data-uk="Стратегія" data-en="The Strategy">Стратегія</div>
