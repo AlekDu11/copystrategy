@@ -442,6 +442,7 @@ footer p { max-width: 70ch; justify-self: end; }
       <a href="#risks" data-i18n="nav.risks">Ризики</a>
       <a href="#start" data-i18n="nav.start">Як почати</a>
       <a href="#bingx">BingX</a>
+      <a href="guide.html" data-i18n="nav.guide">Інструкція</a>
       <a href="#faq">FAQ</a>
       <a href="#team" data-i18n="nav.team">Команда</a>
     </nav>
@@ -466,7 +467,7 @@ footer p { max-width: 70ch; justify-self: end; }
             <span data-i18n="cta.main">Копіювати стратегію на Binance</span>
           </a>
           <a class="btn btn-bx" href="https://bingx.com/ru/CopyTrading/1095584368959700995" target="_blank" rel="noopener"><span data-i18n="cta.bingx">Копіювати на BingX</span></a>
-          <a class="btn btn-ghost" href="#start" data-i18n="cta.how">Інструкція з підключення</a>
+          <a class="btn btn-ghost" href="guide.html" data-i18n="cta.how">Інструкція з підключення</a>
         </div>
         <ul class="trust">
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-i18n="trust.1">Без ліквідацій</span></li>
@@ -655,6 +656,7 @@ footer p { max-width: 70ch; justify-self: end; }
 <section class="block" id="start">
   <div class="wrap">
     <h2 data-i18n="sp.title">Як підключитись</h2>
+    <p class="lede"><a class="btn btn-main" href="guide.html" data-i18n="cta.guide">Покрокова інструкція зі скрінами →</a></p>
     <p class="lede" data-i18n="sp.lede">Мінімальна сума — $100, рекомендуємо від $1 000. Введіть свою суму — і калькулятор покаже, що саме обрати й вписати на Binance.</p>
 
     <div class="setup">
@@ -769,7 +771,7 @@ footer p { max-width: 70ch; justify-self: end; }
       </dl></div>
       <div class="param"><h3>BingX</h3><dl>
         <dt data-i18n="bx2.capital">Наш капітал</dt><dd>~$5 000</dd>
-        <dt data-i18n="bx2.min">Мінімум / радимо</dt><dd>$100 / $1 000</dd>
+        <dt data-i18n="bx2.minX">Як копіюється</dt><dd data-i18n="bx2.minXV">від 5 USDT на покупку</dd>
         <dt data-i18n="bx2.share">Частка з прибутку</dt><dd data-i18n="bx2.shareV">10%, лише з прибутку</dd>
         <dt data-i18n="bx2.hist">Історія</dt><dd data-i18n="bx2.histX">з листопада 2026</dd>
       </dl></div>
@@ -778,14 +780,15 @@ footer p { max-width: 70ch; justify-self: end; }
     <div class="bx-box">
       <h3 data-i18n="bx2.how">Як підключитись на BingX</h3>
       <ol class="bx-steps">
-        <li data-i18n-html="bx2.s1">Немає акаунта BingX? <b>Зареєструйтесь</b> за кнопкою нижче й поповніть <b>спотовий</b> рахунок у USDT.</li>
+        <li data-i18n-html="bx2.s1">Немає акаунта BingX? <b>Зареєструйтесь</b> за кнопкою нижче й поповніть рахунок у USDT.</li>
         <li data-i18n-html="bx2.s2">Відкрийте наш профіль <b>AleksDu</b> → вкладка <b>«Спот»</b> → <b>«Копировать»</b>.</li>
-        <li data-i18n-html="bx2.s3">Вкажіть суму копіювання й підтвердьте. Угоди почнуть копіюватись з наступної покупки бота.</li>
+        <li data-i18n-html="bx2.s3">«Копіювати за: <b>За ордером</b>» → у полі <b>«Маржа»</b> вкажіть суму на <b>одну</b> покупку (від 5 USDT) → «Копіювати». Угоди почнуть копіюватись з наступної покупки бота.</li>
         <li data-i18n-html="bx2.s4">Щоб зупинитись — <b>«Остановить копирование»</b> у розділі «Мое копирование».</li>
       </ol>
-      <p class="bx-tip" data-i18n="bx2.tip">Чому радимо від $1 000: на BingX мінімальний ордер ≈ $5. Сітка починається з невеликих ордерів, і при малій сумі частина з них у вас просто не відкриється.</p>
+      <p class="bx-tip" data-i18n="bx2.tip">Скільки ставити: кожна наша покупка копіюється у вас на вашу маржу. На глибокому падінні може бути відкрито до 35 покупок одночасно, тож маржа ≈ 1% від суми, яку ви готові виділити: $1 000 → 10 USDT, $5 000 → 50 USDT.</p>
       <div class="find-actions">
         <a class="btn btn-main" href="https://bingx.com/ru/CopyTrading/1095584368959700995" target="_blank" rel="noopener" data-i18n="bx2.open">Відкрити профіль на BingX</a>
+        <a class="btn btn-ghost" href="guide.html#bingx" data-i18n="bx2.guide">Інструкція зі скрінами</a>
         <a class="btn btn-ghost" href="https://bingxdao.com/invite/KVGIVR/" target="_blank" rel="noopener" data-i18n="bx2.reg">Реєстрація на BingX</a>
       </div>
     </div>
@@ -896,11 +899,12 @@ const T = {
     'bx2.title': 'Тепер і на BingX', 'bx2.lede': 'Та сама стратегія, ті самі угоди. Наш бот повторює кожну покупку й кожен тейк з Binance на BingX автоматично, за кілька секунд. Обирайте біржу, де вам зручніше.',
     'bx2.capital': 'Наш капітал', 'bx2.min': 'Мінімум / радимо', 'bx2.share': 'Частка з прибутку', 'bx2.shareV': '10%, лише з прибутку', 'bx2.hist': 'Історія', 'bx2.histB': 'з березня 2026', 'bx2.histX': 'з листопада 2026',
     'bx2.how': 'Як підключитись на BingX',
-    'bx2.s1': 'Немає акаунта BingX? <b>Зареєструйтесь</b> за кнопкою нижче й поповніть <b>спотовий</b> рахунок у USDT.',
+    'bx2.s1': 'Немає акаунта BingX? <b>Зареєструйтесь</b> за кнопкою нижче й поповніть рахунок у USDT.',
     'bx2.s2': 'Відкрийте наш профіль <b>AleksDu</b> → вкладка <b>«Спот»</b> → <b>«Копировать»</b>.',
-    'bx2.s3': 'Вкажіть суму копіювання й підтвердьте. Угоди почнуть копіюватись з наступної покупки бота.',
+    'bx2.s3': '«Копіювати за: <b>За ордером</b>» → у полі <b>«Маржа»</b> вкажіть суму на <b>одну</b> покупку (від 5 USDT) → «Копіювати». Угоди почнуть копіюватись з наступної покупки бота.',
+    'bx2.minX': 'Як копіюється', 'bx2.minXV': 'від 5 USDT на покупку', 'bx2.guide': 'Інструкція зі скрінами', 'nav.guide': 'Інструкція', 'cta.guide': 'Покрокова інструкція зі скрінами →',
     'bx2.s4': 'Щоб зупинитись — <b>«Остановить копирование»</b> у розділі «Мое копирование».',
-    'bx2.tip': 'Чому радимо від $1 000: на BingX мінімальний ордер ≈ $5. Сітка починається з невеликих ордерів, і при малій сумі частина з них у вас просто не відкриється.',
+    'bx2.tip': 'Скільки ставити: кожна наша покупка копіюється у вас на вашу маржу. На глибокому падінні може бути відкрито до 35 покупок одночасно, тож маржа ≈ 1% від суми, яку ви готові виділити: $1 000 → 10 USDT, $5 000 → 50 USDT.',
     'bx2.open': 'Відкрити профіль на BingX', 'bx2.reg': 'Реєстрація на BingX',
     'cta.short': 'Копіювати', 'cta.onBinance': 'на Binance', 'cta.main': 'Копіювати стратегію на Binance', 'cta.how': 'Інструкція з підключення',
     'hero.title': 'Сітка на BTC і ETH.<span>Спот, без плечей.</span>',
@@ -1000,11 +1004,12 @@ const T = {
     'bx2.title': 'Now on BingX too', 'bx2.lede': 'Same strategy, same trades. Our bot mirrors every buy and every take-profit from Binance to BingX automatically, within seconds. Pick the exchange you prefer.',
     'bx2.capital': 'Our capital', 'bx2.min': 'Minimum / recommended', 'bx2.share': 'Profit share', 'bx2.shareV': '10%, only from profit', 'bx2.hist': 'Track record', 'bx2.histB': 'since March 2026', 'bx2.histX': 'since November 2026',
     'bx2.how': 'How to connect on BingX',
-    'bx2.s1': 'No BingX account? <b>Sign up</b> with the button below and fund your <b>Spot</b> account with USDT.',
+    'bx2.s1': 'No BingX account? <b>Sign up</b> with the button below and top up your account with USDT.',
     'bx2.s2': 'Open our profile <b>AleksDu</b> → <b>Spot</b> tab → <b>Copy</b>.',
-    'bx2.s3': 'Enter the copy amount and confirm. Trades start copying from the bot\'s next buy.',
+    'bx2.s3': 'Copy by: <b>Per order</b> → in the <b>Margin</b> field enter the amount for <b>one</b> buy (from 5 USDT) → Copy. Trades start copying from the bot\'s next buy.',
+    'bx2.minX': 'How it copies', 'bx2.minXV': 'from 5 USDT per buy', 'bx2.guide': 'Guide with screenshots', 'nav.guide': 'Guide', 'cta.guide': 'Step-by-step guide with screenshots →',
     'bx2.s4': 'To stop — <b>Stop copying</b> in the “My copy trading” section.',
-    'bx2.tip': 'Why we recommend $1,000+: the minimum order on BingX is about $5. The grid starts with small orders, so with a small amount some of them simply won\'t open for you.',
+    'bx2.tip': 'How much to set: each of our buys is copied at your margin. In a deep drop up to 35 buys can be open at once, so set margin ≈ 1% of what you set aside: $1,000 → 10 USDT, $5,000 → 50 USDT.',
     'bx2.open': 'Open profile on BingX', 'bx2.reg': 'Sign up on BingX',
     'cta.short': 'Copy', 'cta.onBinance': 'on Binance', 'cta.main': 'Copy the strategy on Binance', 'cta.how': 'Setup guide',
     'hero.title': 'A grid on BTC and ETH.<span>Spot. No leverage.</span>',
